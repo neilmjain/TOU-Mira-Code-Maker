@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOU Mira Lobby Ad Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body oncontextmenu="return false;">
+    <video autoplay muted loop src="videoplayback.mp4">
+        <source src="videoplayback.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  <div class="main-panel">
+
+    <input id="code" type="text" class="code-box" placeholder="Enter code...">
+
+    <div class="info">
+
+  <div class="form-row">
+    <label for="host">HOST : </label>
+    <input id="host" type="text" class="field-box">
+  </div>
+
+  <div class="form-row">
+    <label for="players">CAPACITY : </label>
+    <div class="capacity-group">
+      <input style="width: 0px !important; " type="number" id="players" class="field-box" placeholder="Current">
+      <span class="divider">/</span>
+      <input type="number" id="maxplayers" class="field-box" placeholder="Max">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="region">REGION : </label>
+    <select id="region" class="field-box">
+      <option>MNA</option>
+      <option>MEU</option>
+      <option>MAS</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label for="ping">CHAT TYPE : </label>
+    <select id="ping" class="field-box">
+      <option value="<@&1388229364860063834>">BCL</option>
+      <option value="<@&1388229432992469252>">VC</option>
+      <option value="<@&1388229471865405491>">No VC</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label for="map">MAP : </label>
+    <select id="map" class="field-box">
+      <option>Variable</option>
+      <option>The Skeld</option>
+      <option>Mira HQ</option>
+      <option>Polus</option>
+      <option>Airship</option>
+      <option>Fungle</option>
+    </select>
+  </div>
+
+  <div class="form-row checkbox-row">
+    <label><input type="checkbox" id="inlobby" checked> In Lobby</label>
+    <label><input type="checkbox" id="timestamp" checked> Add Timestamp</label>
+    <label><input type="checkbox" id="website"> Website Link</label>
+  </div>
+
+  <div class="form-row">
+    <textarea style="width: 100%;" id="extra" class="field-box" placeholder="Extra notes..."></textarea>
+  </div>
+
+</div>
+
+    <textarea id="result" class="result-box" readonly></textarea>
+
+    <button id="generate-btn" class="join-btn">GENERATE & COPY</button>
+  </div>
+
+<div id="copy-notification" style="display: none;">
+  ✅ Copied to clipboard!
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
